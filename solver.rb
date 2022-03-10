@@ -5,4 +5,10 @@ class Solver
     return 1 if number <= 1
     number * factorial(number -1)
   end
+
+  def reverse(string)
+    raise Exception.new "input is not a string" unless string.is_a?(String)
+    string.reverse
+  end
+  
 end

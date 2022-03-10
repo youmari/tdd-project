@@ -31,9 +31,6 @@ describe Solver do
     end
 
     it "should return an Exception if input is not a string" do
-      reverse = @solver.reverse(nil)
-      reverse1 = @solver.reverse(89)
-
       expect { @solver.reverse(nil)}.to raise_error(Exception,'input is not a string')
       expect { @solver.reverse(89) }.to raise_error(Exception,'input is not a string')
     end
