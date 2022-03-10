@@ -11,15 +11,12 @@ describe Solver do
 
   it "it should return an raise an error" do
     solver = Solver.new
-    
-    factorial = solver.factorial(-1)
-
-    expect(factorial).to raise_error
+    expect {factorial = solver.factorial(-1)}.to raise_error(Exception,'negative numbers not allowed')
   end
 
   it "it should return an nil" do
     solver = Solver.new
-    
+
     factorial = solver.factorial(nil)
 
     expect(factorial).to be nil
