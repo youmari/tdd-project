@@ -16,6 +16,14 @@ describe Solver do
 
     expect(factorial).to raise_error
   end
+
+  it "it should return an nil" do
+    solver = Solver.new
+    
+    factorial = solver.factorial(nil)
+
+    expect(factorial).to be nil
+  end
   
   
 end
