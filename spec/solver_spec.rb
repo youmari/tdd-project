@@ -34,7 +34,39 @@ describe Solver do
       expect { @solver.reverse(nil)}.to raise_error(Exception,'input is not a string')
       expect { @solver.reverse(89) }.to raise_error(Exception,'input is not a string')
     end
+  end
+
+  context "Testing for fizzbuzz" do
+    it "should return fizz" do 
+      fizz = @solver.fizzbuzz(12)
+
+      expect(fizz).to eql 'fizz'  
+    end
+
+    it "should return buzz" do 
+      fizz = @solver.fizzbuzz(20)
+
+      expect(fizz).to eql 'fizzbuzz'  
+    end
+
+    it "should return fizzbuzz" do 
+      fizz = @solver.fizzbuzz(15)
+
+      expect(fizz).to eql 'fizzbuzz'  
+    end
+
+    it "should return 14" do 
+      fizz = @solver.fizzbuzz(14)
+
+      expect(fizz).to eql '14'  
+    end
+
+    it "should return Exception if input not a number" do
+      expect {@solver.fizzbuzz(nil)}.to raise_error(Exception,'input is not a number')
+      expect {@solver.fizzbuzz('hhh')}.to raise_error(Exception,'input is not a number')
+    end
     
   end
+  
   
 end
