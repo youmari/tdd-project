@@ -6,7 +6,7 @@ describe Solver do
     
     factorial = solver.factorial(5)
 
-    expect(factorial).to eql 5 
+    expect(factorial).to eql 120 
   end
   
 end
