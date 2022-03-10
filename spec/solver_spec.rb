@@ -8,5 +8,14 @@ describe Solver do
 
     expect(factorial).to eql 120 
   end
+
+  it "it should return an raise an error" do
+    solver = Solver.new
+    
+    factorial = solver.factorial(-1)
+
+    expect(factorial).to raise_error
+  end
+  
   
 end
