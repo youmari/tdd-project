@@ -46,7 +46,7 @@ describe Solver do
     it "should return buzz" do 
       fizz = @solver.fizzbuzz(20)
 
-      expect(fizz).to eql 'fizzbuzz'  
+      expect(fizz).to eql 'buzz'  
     end
 
     it "should return fizzbuzz" do 
